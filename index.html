@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Learning Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background: #0f0f0f;
+        color: #e8e8e8;
+        line-height: 1.6;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      header {
+        padding: 4rem 0 2rem;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        color: #a0a0a0;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #2a2a2a;
+        color: #ffffff;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .learning-note {
+        background: #1a1a1a;
+        border: 1px solid #2a2a2a;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        text-align: center;
+      }
+
+      .learning-note p {
+        color: #b0b0b0;
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .projects {
+        padding: 3rem 0 2rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .project-card {
+        background: #1a1a1a;
+        border: 1px solid #2a2a2a;
+        border-radius: 12px;
+        padding: 2rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #4a4a4a, transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-4px);
+        border-color: #3a3a3a;
+        background: #1f1f1f;
+      }
+
+      .project-card:hover::before {
+        opacity: 1;
+      }
+
+      .project-number {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: #2a2a2a;
+        color: #ffffff;
+        border-radius: 6px;
+        text-align: center;
+        line-height: 28px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .project-title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.01em;
+      }
+
+      .project-description {
+        color: #a0a0a0;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .project-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .skill-tag {
+        background: #2a2a2a;
+        color: #d0d0d0;
+        padding: 0.2rem 0.6rem;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 400;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 400;
+        transition: all 0.2s ease;
+        opacity: 0.8;
+      }
+
+      .project-link:hover {
+        opacity: 1;
+        transform: translateX(4px);
+      }
+
+      .arrow {
+        transition: transform 0.2s ease;
+      }
+
+      .project-link:hover .arrow {
+        transform: translateX(2px);
+      }
+
+      footer {
+        border-top: 1px solid #2a2a2a;
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      .footer-text {
+        color: #666666;
+        font-size: 0.85rem;
+        font-weight: 400;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 1.5rem;
+        }
+
+        header {
+          padding: 3rem 0 1.5rem;
+        }
+
+        .project-grid,
+        .component-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .project-card,
+        .component-card {
+          padding: 1.5rem;
+        }
+
+        .projects {
+          padding: 2rem 0 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>JavaScript Learning Journey</h1>
+        <p class="subtitle">Building skills through hands-on projects</p>
+        <span class="badge">Learning in Progress</span>
+      </header>
+
+      <div class="learning-note">
+        <p>
+          These projects are part of my JavaScript learning course, focusing on
+          DOM manipulation, event handling, and game logic implementation.
+        </p>
+      </div>
+
+      <section class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-number">01</div>
+            <h3 class="project-title">Guess My Number</h3>
+            <p class="project-description">
+              Interactive number guessing game with score tracking and high
+              score persistence.
+            </p>
+            <div class="project-skills">
+              <span class="skill-tag">DOM Events</span>
+              <span class="skill-tag">Game Logic</span>
+              <span class="skill-tag">State Management</span>
+            </div>
+            <a href="01-Guess-My-Number/index.html" class="project-link">
+              View project <span class="arrow">→</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">02</div>
+            <h3 class="project-title">Modal Component</h3>
+            <p class="project-description">
+              Reusable modal component with keyboard navigation and
+              accessibility features.
+            </p>
+            <div class="project-skills">
+              <span class="skill-tag">DOM Manipulation</span>
+              <span class="skill-tag">Event Listeners</span>
+              <span class="skill-tag">CSS Classes</span>
+            </div>
+            <a href="02-Modal/index.html" class="project-link">
+              View project <span class="arrow">→</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-number">07</div>
+            <h3 class="project-title">Pig Game</h3>
+            <p class="project-description">
+              Strategic two-player dice game with risk management and turn-based
+              mechanics.
+            </p>
+            <div class="project-skills">
+              <span class="skill-tag">Game Logic</span>
+              <span class="skill-tag">Player States</span>
+              <span class="skill-tag">Random Numbers</span>
+            </div>
+            <a href="07-Pig-Game/index.html" class="project-link">
+              View project <span class="arrow">→</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <p class="footer-text">
+          Learning JavaScript fundamentals through practical application
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
