@@ -37,10 +37,14 @@ const firstName = 'Rahul';
 calcAge(1991);
 // console.log(age);
 // pritAge();
+
 */
 
 /* -------------------------------- */
 // Hoisting and TDZ in Practice
+/* -------------------------------- */
+
+/*
 
 // Variables
 console.log(me);
@@ -85,3 +89,41 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.y);
+ 
+*/
+
+/* -------------------------------- */
+// this keyword practice
+/* -------------------------------- */
+
+console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2025 - birthYear);
+  // console.log(this);
+};
+calcAge(2000);
+
+const calcAgeArrow = birthYear => {
+  console.log(2025 - birthYear);
+  // console.log(this);
+};
+calcAgeArrow(2005);
+
+const rahul = {
+  year: 2005,
+  calcAge: function () {
+    console.log(this);
+    console.log(2025 - this.year);
+  },
+};
+rahul.calcAge();
+
+const mayra = {
+  year: 2022,
+};
+mayra.calcAge = rahul.calcAge;
+mayra.calcAge();
+
+const f = rahul.calcAge;
+f();
