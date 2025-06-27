@@ -136,6 +136,8 @@ f();
 // Regular Functions vs. Arrow Functions
 /* -------------------------------- */
 
+/*
+
 // var firstName = 'Mayra';
 
 const rahul = {
@@ -185,3 +187,70 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5, 8);
+
+*/
+
+/* ------------------------------------- */
+// Regular Functions vs. Arrow Functions
+/* ------------------------------------- */
+
+/*
+
+let age = 20;
+let oldAge = age;
+age = 21;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Rahul',
+  age: 20,
+};
+
+const friend = me;
+friend.age = 27;
+console.log('Friend:', friend);
+console.log('Me:', me);
+
+*/
+
+/* ---------------------------------- */
+// Primitives vs. Objects in Practice
+/* ---------------------------------- */
+
+// Primitive types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+// Reference types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage:', marriedJessica);
+
+// marriedJessica = {};
+
+// Copying Objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Merry');
+jessicaCopy.family.push('John');
+
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
