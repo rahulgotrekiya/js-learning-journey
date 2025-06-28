@@ -54,6 +54,44 @@ const restaurant = {
   },
 };
 
+//----------------------//
+
+// Short Circuiting (&& and ||)
+
+console.log('---- OR ----');
+
+// Use ANY data type, return ANY data type, short- circuiting
+console.log(3 || 'Rahul');
+console.log('' || 'Rahul');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.numGuests = 0;
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest1);
+
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
+console.log('---- AND ----');
+console.log(0 && 'Rahul');
+console.log(7 && 'Rahul');
+
+console.log('Hello' && 23 && 'rahul');
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+/*
+
+//----------------------//
+
+// Rest Pattern and Parameters
+
 // 1) Destructuring
 
 // SPREAD, because on RIGHT side of =
@@ -89,6 +127,8 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onios', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
+
+*/
 
 /*
 
