@@ -54,6 +54,19 @@ const restaurant = {
   },
 };
 
+// Looping Arrays: The for-of Loop
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+// console.log([...menu.entries()]);
+
+//----------------------//
+
 // Coding Challenge #1
 
 /* 
@@ -73,6 +86,8 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 
 GOOD LUCK 😀
 */
+
+/*
 
 const game = {
   team1: 'Bayern Munich',
@@ -148,6 +163,9 @@ printGoals(...game.scored);
 // 7.
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
+
+*/
+
 /*
 
 //----------------------//
