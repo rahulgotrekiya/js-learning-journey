@@ -55,6 +55,45 @@ const restaurant = {
   },
 };
 
+// Sets
+
+const ordreSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordreSet);
+
+console.log(new Set('Rahul'));
+
+console.log(ordreSet.size);
+console.log(ordreSet.has('Pizza'));
+console.log(ordreSet.has('Bread'));
+ordreSet.add('Garlic Bread');
+ordreSet.add('Garlic Bread');
+ordreSet.delete('Risotto');
+// ordreSet.clear();
+console.log(ordreSet);
+
+for (const order of ordreSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+console.log(
+  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+);
+
+console.log(new Set('rahulgotrekiya').size);
+
+//----------------------//
+
 // Coding Challenge #2
 
 /* 
@@ -118,6 +157,8 @@ const game = {
   },
 };
 
+/*
+
 // 1.
 for (const [i, player] of game.scored.entries()) {
   console.log(`Goal ${i + 1}: ${player}`);
@@ -146,6 +187,8 @@ const scorers = {};
 for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
+
+*/
 
 /*
 
