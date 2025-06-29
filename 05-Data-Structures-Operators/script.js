@@ -55,6 +55,70 @@ const restaurant = {
   },
 };
 
+// Working with Strings - Part 2
+
+const airLine = 'TAP Air Portugal';
+
+console.log(airLine.toLowerCase());
+console.log(airLine.toUpperCase());
+
+// Fix the capitalization in name
+const passenger = 'rAhUL'; // Rahul
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// Comparing email
+const email = 'hello@rahul.io';
+const loginEmail = ' Hello@Rahul.Io \n';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+const normalizeEmail = loginEmail.toLowerCase().trim();
+console.log(normalizeEmail);
+console.log(email === normalizeEmail);
+
+// replacing
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+
+console.log(announcement.replace('door', 'gate'));
+// console.log(announcement.replaceAll('door', 'gate'));
+console.log(announcement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Ai'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the new Airbus family');
+}
+
+// Practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  } else {
+    console.log('Welcome aboard!');
+  }
+};
+
+checkBaggage('I have a laptop, some food and a pocket Knife');
+checkBaggage('Socks and camara');
+checkBaggage('Got some snacks and a gun for protection');
+
+/*
+
+//----------------------//
+
 // Working with Strings - Part 1
 
 const airLine = 'TAP Air Portugal';
@@ -95,6 +159,8 @@ console.log(new String('Rahul'));
 console.log(typeof new String('Rahul'));
 
 console.log(typeof new String('Rahul').slice(1));
+
+*/
 
 //----------------------//
 
