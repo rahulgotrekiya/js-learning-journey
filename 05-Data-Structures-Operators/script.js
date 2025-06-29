@@ -55,6 +55,49 @@ const restaurant = {
   },
 };
 
+// Working with Strings - Part 1
+
+const airLine = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B373'[0]);
+console.log(airLine.length);
+console.log('B373'.length);
+
+console.log(airLine.indexOf('r'));
+console.log(airLine.lastIndexOf('r'));
+console.log(airLine.indexOf('Portugal'));
+
+console.log(airLine.slice(4));
+console.log(airLine.slice(4, 7));
+
+console.log(airLine.slice(0, airLine.indexOf(' ')));
+console.log(airLine.slice(airLine.lastIndexOf(' ') + 1));
+
+console.log(airLine.slice(-2));
+console.log(airLine.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are the middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log('You got the middle seat 😬');
+  else console.log('You got lucky 😎');
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('3E');
+
+console.log(new String('Rahul'));
+console.log(typeof new String('Rahul'));
+
+console.log(typeof new String('Rahul').slice(1));
+
+//----------------------//
+
 // Coding Challenge #3
 
 /* 
@@ -83,6 +126,8 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
+/*
+
 // 1.
 const events = [...new Set(gameEvents.values())];
 console.log(events);
@@ -105,6 +150,8 @@ for (const [min, event] of gameEvents) {
   const half = min <= 45 ? 'FIRST' : 'SECOND';
   console.log(`${half} HALF ${min}: ${event}`);
 }
+
+*/
 
 /*
 
