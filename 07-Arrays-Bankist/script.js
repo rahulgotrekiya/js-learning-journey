@@ -161,6 +161,8 @@ movements.forEach(function (mov, i, arr) {
 
 */
 
+/*
+
 // ----------------------- //
 // forEach With Maps and Sets
 
@@ -181,3 +183,8 @@ console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
+
+*/
+
+// ----------------------- //
+// Project: "Bankist" App
