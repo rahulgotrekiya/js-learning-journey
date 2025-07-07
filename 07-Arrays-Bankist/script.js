@@ -128,6 +128,8 @@ console.log('rahul'.at(-1));
 
 */
 
+/*
+
 // ----------------------- //
 // Looping Arrays: forEach
 
@@ -156,3 +158,26 @@ movements.forEach(function (mov, i, arr) {
 // 1: function(450)
 // 2: function(400)
 // ...
+
+*/
+
+// ----------------------- //
+// forEach With Maps and Sets
+
+// Map
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
+});
+
+// Set
+const currenciesUnique = new Set(['USD', 'GPB', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUnique);
+currenciesUnique.forEach(function (value, _, map) {
+  console.log(`${value}: ${value}`);
+});
