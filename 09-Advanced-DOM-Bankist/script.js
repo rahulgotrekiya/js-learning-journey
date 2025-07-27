@@ -133,8 +133,6 @@ logo.classList.contains('c'); // not includes
 // Implementing Smooth Scrolling
 /* ------------------------------ */
 
-/*
-
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 
@@ -166,8 +164,6 @@ btnScrollTo.addEventListener('click', function (e) {
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-
-/*
 
 /* --------------------------------- */
 // Type of Events and Event Handlers
