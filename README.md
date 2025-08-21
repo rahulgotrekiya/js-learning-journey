@@ -1,6 +1,6 @@
 # 🚀 JavaScript Learning Journey
 
-A collection of interactive projects built while learning JavaScript fundamentals. Each project demonstrates core concepts like DOM manipulation, event handling, game logic, and modern JavaScript features.
+A collection of interactive projects built while learning JavaScript fundamentals. Each project demonstrates core concepts like DOM manipulation, event handling, game logic, array methods, and modern JavaScript features.
 
 ## 🎯 About This Repository
 
@@ -119,12 +119,102 @@ Advanced function concepts including higher-order functions, closures, and IIFE.
 
 **Live Demo:** [Try it here](https://rahulgotrekiya.github.io/js-learning-journey/06-Functions/)
 
+---
+
+### 🏦 [07 - Arrays & Bankist App](./07-Arrays-Bankist/)
+
+A fully functional banking application demonstrating advanced array methods and data processing.
+
+**Key Concepts:**
+
+* Array methods (map, filter, reduce, find, some, every)
+* forEach with arrays, maps, and sets
+* Method chaining and data transformations
+* Array sorting and manipulation
+* Creating usernames dynamically
+* DOM manipulation with dynamic content
+* Login authentication system
+* Transfer and loan operations
+
+**Features:**
+
+* User login with PIN validation
+* Display account movements and balance
+* Money transfer between accounts
+* Loan request functionality
+* Account closure capability
+* Transaction sorting
+
+**Live Demo:** [Try it here](https://rahulgotrekiya.github.io/js-learning-journey/07-Arrays-Bankist/)
+
+---
+
+### 📊 [08 - Numbers, Dates & Timers Bankist](./08-Numbers-Dates-Timers-Bankist/)
+
+Enhanced Bankist app with internationalization, number formatting, and timer functionality.
+
+**Key Concepts:**
+
+* Number parsing, converting, and checking (parseInt, parseFloat, isNaN, isFinite)
+* Math operations and rounding (Math.round, Math.ceil, Math.floor, Math.trunc)
+* Numeric separators and BigInt
+* Date creation and manipulation
+* Date calculations and operations
+* Internationalization API (Intl.NumberFormat, Intl.DateTimeFormat)
+* Timers (setTimeout, setInterval)
+* Logout timer implementation
+
+**New Features:**
+
+* International number formatting
+* Date localization and formatting
+* Automatic logout timer
+* Loan approval delays
+* Movement date tracking
+* Currency formatting by locale
+
+**Live Demo:** [Try it here](https://rahulgotrekiya.github.io/js-learning-journey/08-Numbers-Dates-Timers-Bankist/)
+
+---
+
+### 🌟 [09 - Advanced DOM & Bankist Website](./09-Advanced-DOM-Bankist/)
+
+A modern, interactive landing page showcasing advanced DOM manipulation and modern web development techniques.
+
+**Key Concepts:**
+
+* Advanced DOM selection and manipulation
+* Event delegation and propagation
+* Smooth scrolling implementation
+* Intersection Observer API
+* Lazy loading images
+* Tabbed components
+* Modal windows
+* Sticky navigation
+* Revealing elements on scroll
+* Slider component with navigation
+
+**Features:**
+
+* Smooth page navigation
+* Sticky header on scroll
+* Lazy-loaded images for performance
+* Interactive tabbed content
+* Image slider with dots navigation
+* Modal account signup form
+* Hover effects and animations
+* Responsive design elements
+
+**Live Demo:** [Try it here](https://rahulgotrekiya.github.io/js-learning-journey/09-Advanced-DOM-Bankist/)
+
 ## 🛠️ Technologies Used
 
 * **Vanilla JavaScript** - Pure JS without frameworks
 * **HTML5** - Semantic markup
 * **CSS3** - Modern styling and responsive design
 * **DOM API** - Direct browser interaction
+* **Intersection Observer API** - Modern scroll-based animations
+* **Intl API** - Internationalization and localization
 
 ## 🚀 Getting Started
 
@@ -171,23 +261,47 @@ Each project targets specific JavaScript concepts taught in the course:
 * **Game Logic** - Implementing rules and win conditions
 * **State Management** - Tracking and updating application state
 * **Function Concepts** - Scope, closures, and higher-order functions
+* **Array Methods** - Functional programming with map, filter, reduce
 * **Modern JS Features** - ES6+ syntax and best practices
+* **Asynchronous JavaScript** - Timers and modern APIs
+* **Internationalization** - Multi-language and locale support
 
-## 🎮 How to Play the Games
+## 🎮 How to Use the Applications
 
-### Guess My Number
+### Games
 
+#### Guess My Number
 * Try to guess the secret number between 1 and 20
 * You start with a score of 20
 * Each wrong guess reduces your score
 * Beat your high score!
 
-### Pig Game
-
+#### Pig Game
 * Roll dice to accumulate points
 * "Hold" to save your score and pass the turn
 * But be careful - rolling a 1 loses all current points!
 * First to 100 wins!
+
+### Banking Applications
+
+#### Bankist App (Arrays & Numbers versions)
+* **Demo Accounts:**
+  * Username: `js`, PIN: `1111` (Jonas Schmedtmann)
+  * Username: `jd`, PIN: `2222` (Jessica Davis)
+* **Features:**
+  * View account balance and transaction history
+  * Transfer money between accounts
+  * Request loans (must have a deposit ≥ 10% of loan amount)
+  * Close account with confirmation
+  * Sort transactions
+  * Auto-logout after inactivity
+
+#### Bankist Website
+* Explore the modern landing page
+* Smooth navigation between sections
+* Interactive tabbed components
+* Image slider with testimonials
+* Modal account signup form
 
 ## 📖 Course Progress
 
@@ -198,9 +312,9 @@ This repository follows a structured learning path:
 * [x] Functions Deep Dive
 * [x] Behind the Scenes (Scope, Hoisting, Closures)
 * [x] Data Structures & Modern Operators
-* [ ] Working with Arrays
-* [ ] Numbers, Dates, Timers
-* [ ] Advanced DOM and Events
+* [x] Working with Arrays
+* [x] Numbers, Dates, Timers
+* [x] Advanced DOM and Events
 * [ ] Object-Oriented Programming
 * [ ] Asynchronous JavaScript
 
